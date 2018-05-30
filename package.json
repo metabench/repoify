@@ -1,0 +1,27 @@
+{
+    "name": "repoify",
+    "main": "repoify.js",
+    "license": "MIT",
+    "dependencies": {
+        "bluebird": "^3.5.1",
+        "fs-extra": "^4.0.2",
+        "gitclone": "^2.0.0",
+        "github": "^11.0.0",
+        "github-create-repo": "^1.0.2",
+        "jsgui3": "^0.0.24",
+        "my-config": "^2.0.0",
+        "ncp": "^2.0.0",
+        "request": "^2.83.0",
+        "rimraf": "^2.6.2"
+    },
+    "engines": {
+        "node": ">=8.5.0"
+    },
+    "description": "Creates a new repo for a project (on github), puts code from an existing project directory within the repo, puts the git repo within the project directory.",
+    "author": "James Vickers <james@metabench.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/metabench/repoify.git"
+    },
+    "version": "0.0.1"
+}

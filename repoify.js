@@ -1,5 +1,5 @@
 // Take a JavaScript project in a directory, then create a new git repo for it on github (or wherever), and add the existing files to it.
-var GitHubApi = require("github");
+var GitHubApi = require("@octokit/rest");
 //var bluebird = require('bluebird');
 var createRepo = require('github-create-repo');
 var fs = require('fs');
@@ -21,10 +21,10 @@ const {
     cb_to_prom_or_cb
 } = require('fnl');
 
-console.log("path.resolve('../../config/config.json')", path.resolve('../../config/config.json'));
+console.log("path.resolve('../../../config/config.json')", path.resolve('../../../config/config.json'));
 
-var config = require('./my-config').init({
-    path: path.resolve('../../config/config.json') //,
+var config = require('my-config').init({
+    path: path.resolve('../../../config/config.json') //,
     //env : process.env['NODE_ENV']
     //env : process.env
 });
@@ -36,12 +36,12 @@ var personal_repo_token = config.github_token;
 var github_username = config.github_username;
 var author = config.author_email;
 
-const gitclone = require('./gitclone');
+const gitclone = require('gitclone');
 const use_my_gitignore = true;
 
 // could try to repoify all.
 
-const Repository = require('./git-cli').Repository
+const Repository = require('git-cli').Repository
 
 // https://<token>@github.com/<username>/<repository>.git
 

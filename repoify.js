@@ -1,20 +1,20 @@
 // Take a JavaScript project in a directory, then create a new git repo for it on github (or wherever), and add the existing files to it.
-var GitHubApi = require("./github");
+var GitHubApi = require("github");
 //var bluebird = require('bluebird');
-var createRepo = require('./github-create-repo');
+var createRepo = require('github-create-repo');
 var fs = require('fs');
 //const fs_extra = require('fs-extra');
 
-const jsgui = require('./lang-mini');
+const jsgui = require('lang-mini');
 const Fns = jsgui.Fns;
 //const fs2 = jsgui.fs2;
 const util = require('util');
 //var ncp = util.promisify(require('ncp').ncp);
-var ncp = require('./ncp').ncp;
+var ncp = require('ncp').ncp;
 const exec = util.promisify(require('child_process').exec);
-const request = require('./request');
+const request = require('request');
 const path = require('path');
-const fnlfs = require('./fnlfs');
+const fnlfs = require('fnlfs');
 
 const {
     prom_or_cb,
